@@ -22,10 +22,9 @@ function Testimonial({ theme }) {
         <p>
           <q>
             {" "}
-            Well focused on her work, understands syntax and error handling, and
-            completes the task on time.
-          </q>
-           
+            Well focused on her work, understands syntax and error handling, has
+            good logical thinking, and completes the task on time.
+          </q>          
         </p>
         <p class="flex flex-row-reverse text-xl tracking-wide">Airprobe</p>
       </div>

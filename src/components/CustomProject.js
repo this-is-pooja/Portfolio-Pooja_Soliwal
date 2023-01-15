@@ -13,11 +13,13 @@ const CustomProject = ({
 }) => {
   return (
     <div
-      class={`max-w-md p-10 shadow-xl rounded-xl text-center lg:w-96 md:w-80 sm:w-80 ${
+      class={`max-w-md p-10 shadow-xl rounded-xl text-center lg:w-96 md:w-80 sm:w-80 sm:mb-6 ${
         theme !== "dark" && "bg-Navy"
       } `}
     >
-      <div class="text-white text-xl tracking-widest font-bold font-sofia">{name}</div>
+      <div class="text-white text-xl tracking-widest font-bold font-sofia">
+        {name}
+      </div>
       <p class="text-white text-sm tracking-wider opacity-60 mt-2 mb-2">
         {discription}
       </p>
