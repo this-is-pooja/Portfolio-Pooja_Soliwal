@@ -52,24 +52,8 @@ class About extends React.Component {
                   theme === "dark" ? "text-white opacity-60" : "text-gray"
                 } lg:text-md md:text-sm font-medium`}
               >
-                Front-end web developer with internship-level experience, eager
-                to learn more and solve challenging problems. Currently, I am
-                working at
-              </span>
-              <span
-                class={`${
-                  theme === "dark" ? "text-green" : "text-Navy"
-                } lg:text-md md:text-sm font-extrabold`}
-              >
-                {" "}
-                AirProbe
-              </span>
-              <span
-                class={`opacity-60 lg:text-md md:text-sm font-medium ${
-                  theme === "dark" ? "text-green" : "text-Navy"
-                }`}
-              >
-                .
+                Front-end web developer with 2+ years of experience, eager
+                to learn more and solve challenging problems.
               </span>
             </div>
           </div>
