@@ -44,7 +44,7 @@ function skills({ theme }) {
             languages and technologies. From 2021 on, I shifted my interest
             towards enterprise-level technologies like React. I learned and
             practised a lot, after which I got the chance to show some expertise
-            as a webdev intern at Airprobe.
+            as a webdev at Airprobe.
           </div>
           <div class={` ${heading} pt-4`}>Technologies I use</div>
           <div class="flex justify-left md:gap-10 sm:gap-6">
