@@ -1,13 +1,17 @@
 import React from "react";
-import { 
-  FaFigma, FaJira 
-} from "react-icons/fa";
-import { 
-  GrReactjs 
-} from "react-icons/gr";
-import { 
-  SiChakraui, SiGit, SiJavascript, SiMui, SiNextdotjs, SiRedux, SiTailwindcss, SiVisualstudiocode, SiMantine 
+import { FaFigma, FaJira } from "react-icons/fa";
+import { GrReactjs } from "react-icons/gr";
+import {
+  SiChakraui,
+  SiGit,
+  SiJavascript,
+  SiMui,
+  SiNextdotjs,
+  SiRedux,
+  SiTailwindcss,
+  SiMantine,
 } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 
 function Skills({ theme }) {
   const headingClass = `${
@@ -32,7 +36,7 @@ function Skills({ theme }) {
   const tools = [
     { icon: <FaFigma />, label: "Figma" },
     { icon: <SiGit />, label: "Git" },
-    { icon: <SiVisualstudiocode />, label: "VS Code" },
+    { icon: <VscVscode />, label: "VS Code" },
     { icon: <FaJira />, label: "Jira" },
   ];
 
@@ -57,14 +61,20 @@ function Skills({ theme }) {
         <div className="flex flex-col gap-6">
           <div className={`${headingClass} pt-28`}>Who am I?</div>
           <div className={subHeadingClass}>
-            I'm a BCA Graduate from Kumaun University, Nainital, Uttarakhand. I have completed my Intermediate & High School from the U.K board.
+            I'm a BCA Graduate from Kumaun University, Nainital, Uttarakhand. I
+            have completed my Intermediate & High School from the U.K board.
           </div>
 
           <div className={`${headingClass} pt-6`}>
             For how long I have been coding
           </div>
           <div className={subHeadingClass}>
-            In my first year of BCA (2018), I was introduced to C++, which I chose. Since then, I've explored various programming languages and technologies. From 2021 onward, I shifted my interest to enterprise-level technologies like React. I learned and practiced a lot, after which I got the opportunity to showcase my expertise as a web developer at Airprobe.
+            In my first year of BCA (2018), I was introduced to C++, which I
+            chose. Since then, I've explored various programming languages and
+            technologies. From 2021 onward, I shifted my interest to
+            enterprise-level technologies like React. I learned and practiced a
+            lot, after which I got the opportunity to showcase my expertise as a
+            web developer at Airprobe.
           </div>
 
           <div className={`${headingClass} pt-4`}>Technologies I use</div>
@@ -77,9 +87,17 @@ function Skills({ theme }) {
           </div>
 
           <div className={`${headingClass} pt-6`}>Tools I use</div>
-          <div className="flex justify-left md:gap-10 sm:gap-6">
+          <div className="flex items-center justify-left md:gap-10 sm:gap-6">
             {tools.map((tool, index) => (
-              <div key={index} className={iconClass} title={tool.label}>
+              <div
+                key={index}
+                className={`${iconClass} 
+                ${
+                  tool.label.includes("VS") && "text-[3.4rem]"
+                }`
+              }
+                title={tool.label}
+              >
                 {tool.icon}
               </div>
             ))}
