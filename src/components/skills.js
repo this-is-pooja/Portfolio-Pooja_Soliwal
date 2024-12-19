@@ -1,92 +1,97 @@
-import { FaFigma } from "react-icons/fa";
-import { FaJira } from "react-icons/fa";
-import { GrReactjs } from "react-icons/gr";
 import React from "react";
-import { SiChakraui } from "react-icons/si";
-import { SiGit } from "react-icons/si";
-import { SiJavascript } from "react-icons/si";
-import { SiMaterialui } from "react-icons/si";
-import { SiNextdotjs } from "react-icons/si";
-import { SiRedux } from "react-icons/si";
-import { SiTailwindcss } from "react-icons/si";
-import { SiVisualstudiocode } from "react-icons/si";
+import { 
+  FaFigma, FaJira 
+} from "react-icons/fa";
+import { 
+  GrReactjs 
+} from "react-icons/gr";
+import { 
+  SiChakraui, SiGit, SiJavascript, SiMui, SiNextdotjs, SiRedux, SiTailwindcss, SiVisualstudiocode, SiMantine 
+} from "react-icons/si";
 
-function skills({ theme }) {
-  const heading = ` ${
+function Skills({ theme }) {
+  const headingClass = `${
     theme === "dark" ? "text-white" : "text-Navy"
   } md:text-4xl sm:text-3xl font-semibold tracking-widest font-sofia`;
-  const IconStyle = ` ${
+
+  const iconClass = `${
     theme === "dark" ? "text-white opacity-60" : "text-gray"
   } cursor-pointer text-5xl`;
-  const subHead = ` ${
+
+  const subHeadingClass = `${
     theme === "dark" ? "text-white opacity-60" : "text-gray"
-  } text-sm  font-semibold tracking-widest text-md font-medium text-left`;
+  } text-sm font-semibold tracking-widest text-md font-medium text-left`;
+
+  const technologies = [
+    { icon: <SiNextdotjs />, label: "Next.js" },
+    { icon: <GrReactjs />, label: "React" },
+    { icon: <SiJavascript />, label: "JavaScript" },
+    { icon: <SiRedux />, label: "Redux" },
+  ];
+
+  const tools = [
+    { icon: <FaFigma />, label: "Figma" },
+    { icon: <SiGit />, label: "Git" },
+    { icon: <SiVisualstudiocode />, label: "VS Code" },
+    { icon: <FaJira />, label: "Jira" },
+  ];
+
+  const stylingLibraries = [
+    { icon: <SiMui />, label: "MUI" },
+    { icon: <SiChakraui />, label: "Chakra UI" },
+    { icon: <SiTailwindcss />, label: "Tailwind CSS" },
+    { icon: <SiMantine />, label: "Mantine" },
+  ];
+
   return (
-    <div class="pt-40 pb-28" id="knowMore">
+    <div className="pt-40 pb-28" id="knowMore">
       <div
-        class={` ${
+        className={`${
           theme === "dark" ? "text-white" : "text-Navy"
         } lg:text-6xl md:text-5xl sm:text-4xl font-semibold tracking-wider text-center`}
       >
         KNOW MORE
       </div>
-      <div class="md:max-w-xl sm:max-w-sm text-left">
-        <div class="flex flex-col gap-6">
-          <div class={` ${heading} pt-28`}>Who am I ?</div>
-          <div class={subHead}>
-            I'm a BCA Graduate from Kumaun university Nainital, Uttrakhand. and
-            I have done my Intermediate & Highschool from U.K board.
+
+      <div className="md:max-w-xl sm:max-w-sm text-left">
+        <div className="flex flex-col gap-6">
+          <div className={`${headingClass} pt-28`}>Who am I?</div>
+          <div className={subHeadingClass}>
+            I'm a BCA Graduate from Kumaun University, Nainital, Uttarakhand. I have completed my Intermediate & High School from the U.K board.
           </div>
-          <div class={` ${heading} pt-6`}>For how long I have been coding</div>
-          <div class={subHead}>
-            In my first year of BCA (2018), I was introduced to C++, which I
-            chose. Since then, I've dabbled in a variety of programming
-            languages and technologies. From 2021 on, I shifted my interest
-            towards enterprise-level technologies like React. I learned and
-            practised a lot, after which I got the chance to show some expertise
-            as a webdev at Airprobe.
+
+          <div className={`${headingClass} pt-6`}>
+            For how long I have been coding
           </div>
-          <div class={` ${heading} pt-4`}>Technologies I use</div>
-          <div class="flex justify-left md:gap-10 sm:gap-6">
-            <div class={IconStyle}>
-              <SiNextdotjs />
-            </div>
-            <div class={IconStyle}>
-              <GrReactjs />
-            </div>
-            <div class={IconStyle}>
-              <SiJavascript />
-            </div>
-            <div class={IconStyle}>
-              <SiRedux />
-            </div>
+          <div className={subHeadingClass}>
+            In my first year of BCA (2018), I was introduced to C++, which I chose. Since then, I've explored various programming languages and technologies. From 2021 onward, I shifted my interest to enterprise-level technologies like React. I learned and practiced a lot, after which I got the opportunity to showcase my expertise as a web developer at Airprobe.
           </div>
-          <div class={` ${heading} pt-6`}>Tools I use</div>
-          <div class="flex justify-left md:gap-10 sm:gap-6">
-            <div class={IconStyle}>
-              <FaFigma />
-            </div>
-            <div class={IconStyle}>
-              <SiGit />
-            </div>
-            <div class={IconStyle}>
-              <SiVisualstudiocode />
-            </div>
-            <div class={IconStyle}>
-              <FaJira />
-            </div>
+
+          <div className={`${headingClass} pt-4`}>Technologies I use</div>
+          <div className="flex justify-left md:gap-10 sm:gap-6">
+            {technologies.map((tech, index) => (
+              <div key={index} className={iconClass} title={tech.label}>
+                {tech.icon}
+              </div>
+            ))}
           </div>
-          <div class={` ${heading} pt-6`}>Styling libraries</div>
-          <div class="flex justify-left md:gap-10 sm:gap-6">
-            <div class={IconStyle}>
-              <SiMaterialui />
-            </div>
-            <div class={IconStyle}>
-              <SiChakraui />
-            </div>
-            <div class={IconStyle}>
-              <SiTailwindcss />
-            </div>
+
+          <div className={`${headingClass} pt-6`}>Tools I use</div>
+          <div className="flex justify-left md:gap-10 sm:gap-6">
+            {tools.map((tool, index) => (
+              <div key={index} className={iconClass} title={tool.label}>
+                {tool.icon}
+              </div>
+            ))}
+          </div>
+
+          <div className={`${headingClass} pt-6`}>Styling Libraries</div>
+          <div className="flex justify-left md:gap-10 sm:gap-6">
+            {stylingLibraries.map((library, index) => (
+              <div key={index} className={iconClass} title={library.label}>
+                {library.icon}
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -94,4 +99,4 @@ function skills({ theme }) {
   );
 }
 
-export default skills;
+export default Skills;

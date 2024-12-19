@@ -47,12 +47,17 @@ function Work({ theme }) {
   const [nextIconActive, setNextIconActive] = useState(false);
 
   const previousBtnHandler = () => {
-    setPrevIconActive(true);
-    setNextIconActive(false);
+    if (!prevIconActive) {
+      setPrevIconActive(true);
+      setNextIconActive(false);
+    }
   };
+
   const nextBtnHandler = () => {
-    setPrevIconActive(false);
-    setNextIconActive(true);
+    if (!nextIconActive) {
+      setNextIconActive(true);
+      setPrevIconActive(false);
+    }
   };
 
   return (
@@ -160,18 +165,26 @@ function Work({ theme }) {
       </div>
       <div class="sm:hidden md:block">
         <div class="pt-8 flex justify-center gap-5">
-          <div
-            class={`shadow-2xl p-1 rounded-full text-3xl text-center ${
-              theme === "dark" ? "bg-white text-Navy" : "bg-Navy text-white"
-            } cursor-pointer`}
+        <div
+            className={`shadow-2xl p-1 rounded-full text-3xl text-center ${
+              prevIconActive
+                ? "bg-gray text-Navy cursor-not-allowed"
+                : theme === "dark"
+                ? "bg-white text-Navy cursor-pointer"
+                : "bg-Navy text-white cursor-pointer"
+            }`}
             onClick={previousBtnHandler}
           >
             <BiLeftArrowAlt />
           </div>
           <div
             class={`shadow-2xl p-1 rounded-full text-3xl text-center ${
-              theme === "dark" ? "bg-white text-Navy" : "bg-Navy text-white"
-            } cursor-pointer`}
+              nextIconActive
+              ? "bg-gray text-Navy cursor-not-allowed"
+              : theme === "dark"
+              ? "bg-white text-Navy cursor-pointer"
+              : "bg-Navy text-white cursor-pointer"
+          }`}
             onClick={nextBtnHandler}
           >
             <BiRightArrowAlt />
