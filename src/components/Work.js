@@ -81,7 +81,7 @@ function Work({ theme }) {
               }
               LinkContainerClass="flex justify-center gap-5 mt-4 opacity-60 cursor-pointer text-white text-2xl"
               githubLink="https://github.com/this-is-pooja/e-commerce"
-              hostedLink="https://e-commerce-this-is-pooja.vercel.app/"
+              hostedLink="https://ritzy-nine.vercel.app/"
             />
             <Project
               theme={theme}
@@ -129,7 +129,7 @@ function Work({ theme }) {
           animation={<Lottie options={Ecommerce} height={240} width={200} />}
           LinkContainerClass="flex justify-center gap-5 mt-4 opacity-60 cursor-pointer text-white text-2xl"
           githubLink="https://github.com/this-is-pooja/e-commerce"
-          hostedLink="https://e-commerce-this-is-pooja.vercel.app/"
+          hostedLink="https://ritzy-nine.vercel.app/"
         />
         <Project
           theme={theme}
